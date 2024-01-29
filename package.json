@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build & next export",
+    "build": "next build & output: export",
     "start": "next start",
     "precommit": "pretty-quick --staged"
   },

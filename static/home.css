@@ -5,29 +5,43 @@
   --highlight-color-light: #dfa96555;
   --highlight-color-dark: #dfa96555;
 }
-
-#new-home {
-  background: var(--background);
-  color: var(--text-color);
-  min-height: 100vh;
-  padding: 100px 40px 120px;
-  border-top: 8px solid #dfa965;
-  border-image: linear-gradient(90deg, #d56a7b 0%, #dfa965 60%);
-  border-image-slice: 1;
-  font: 14px/22px 'Inter var', system-ui, sans-serif;
-  font-weight: 400;
+.page-container {
+  margin: 0px 40px;
+}
+.home-header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+.toggle-button {
+  display: inline-flex;
+  align-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.toggle-icon {
+  opacity: 0.5;
+}
+.toggle-icon.active {
+  opacity: 1;
+}
+.left-content,
+.middle-content,
+.right-content {
+  flex: 1;
+}
+.middle-content {
+  text-align: center;
+}
+.left-content {
+  display: inline-flex;
   align-items: center;
 }
-.highlight-text {
-  background: linear-gradient(90deg, #d56a7b 0%, #dfa965 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
+.right-content {
+  text-align: right;
 }
-.header .highlight-text {
-  display: inline-block;
-}
+
 #grid-container {
   max-width: 1390px;
   display: grid;
@@ -52,21 +66,8 @@
   display: none;
 }
 
-.subheader {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-.header {
-  font-size: 38px;
-  line-height: 48px;
-  font-weight: 700;
-  max-width: 368px;
-}
-.empahsis {
-  font-size: 22px;
-  line-height: 32px;
-  font-weight: 600;
+.home-intro {
+  width: 788px;
 }
 
 @media screen and (max-width: 1140px) {
@@ -113,33 +114,7 @@
     display: flex;
   }
 }
-p {
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: 500;
-}
-p:not(:first-child) {
-  margin-top: 24px;
-}
-.internet-links {
-  flex-direction: column;
-  align-items: flex-start;
-}
-.internet-links a {
-  margin-top: 4px;
-}
-a {
-  font-size: 16px;
-  font-weight: 700;
 
-  color: var(--higlight-color);
-  text-decoration: none;
-  box-shadow: inset 0px -2px var(--highlight-color);
-}
-a:hover {
-  background: var(--highlight-color);
-  color: var(--background);
-}
 .highlight {
   color: var(--highlight-color);
 }

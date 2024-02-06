@@ -3,55 +3,58 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* -------------------------------------------------------
-Variable font.
-Usage:
-
-  html { font-family: 'Inter', sans-serif; }
-  @supports (font-variation-settings: normal) {
-    html { font-family: 'Inter var', sans-serif; }
-  }
-*/
 @font-face {
-  font-family: 'Inter var';
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-  font-named-instance: 'Regular';
-  src: url('fonts/Inter.var.woff2') format('woff2');
+  font-family: "Degular Regular";
+  src: url("fonts/Degular-Regular.woff"); /* IE9 Compat Modes */
+  src: url("fonts/Degular-Regular.woff2");
 }
 
 @font-face {
-  font-family: 'Karla Regular';
-  src: url('fonts/Karla-Regular.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Karla-Regular.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('fonts/Karla-Regular.woff') format('woff'),
-    /* Pretty Modern Browsers */ url('fonts/Karla-Regular.ttf') format('truetype'),
-    /* Safari, Android, iOS */ url('fonts/Karla-Regular.svg#Karla-Regular') format('svg'); /* Legacy iOS */
+  font-family: "Degular Bold";
+  src: url("fonts/Degular-Bold.woff"); /* IE9 Compat Modes */
+  src: url("fonts/Degular-Bold.woff2");
 }
 
 @font-face {
-  font-family: 'Rubik Medium';
-  src: url('fonts/Rubik-Medium.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('fonts/Rubik-Medium.woff') format('woff'),
-    /* Pretty Modern Browsers */ url('fonts/Rubik-Medium.ttf') format('truetype'),
-    /* Safari, Android, iOS */ url('fonts/Rubik-Medium.svg#Rubik-Medium') format('svg'); /* Legacy iOS */
+  font-family: "Favorit Regular";
+  src: url("fonts/FavoritPro-Regular.otf");
 }
 
+@font-face {
+  font-family: "Favorit Medium";
+  src: url("fonts/FavoritPro-Medium.otf");
+}
+
+@font-face {
+  font-family: "Favorit Bold";
+  src: url("fonts/FavoritPro-Bold.otf");
+}
+
+.html {
+  font-size: 16px;
+}
 body {
-  /font-family: 'Karla Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: "Favorit Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   color: #2e2a4f;
 }
 
 pre,
 .code {
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
   word-break: break-word;
   white-space: normal;
 }
 
+p {
+  margin-bottom: 0.8rem;
+}
+.limiter {
+  max-width: 1280px;
+  margin: auto;
+}
 .mw-limiter {
   max-width: 82rem;
 }
@@ -81,60 +84,21 @@ pre,
   font-size: 1.75rem;
 }
 
-.heading {
-  font-family: 'Rubik Medium', serif;
+.header {
+  font-family: "Degular Bold", serif;
 }
-
+.description {
+  font-family: "Degular Regular", serif;
+  font-size: 2rem;
+  line-height: 2.36rem;
+  b {
+    font-family: "Degular Bold", serif;
+  }
+}
 .flex-no-shrink {
   flex-shrink: 0;
 }
 
 .studio-ui-dive {
   counter-reset: section;
-}
-.shadow {
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
-}
-.studio-ui-dive article::before {
-  counter-increment: section;
-  content: counter(section);
-  background: #000;
-  color: #fff;
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  text-align: center;
-  border-radius: 50%;
-  font-size: 0.875rem;
-}
-.mb-list {
-  list-style: none;
-  counter-reset: section;
-}
-.mb-list li {
-  margin-bottom: 8px;
-}
-
-.bg-mb {
-  background-color: #282828;
-}
-
-.bg-mb-light {
-  background: #404040;
-}
-
-.mb-list li::before {
-  counter-increment: section;
-  content: counter(section);
-  background: #000;
-  color: #fff;
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  text-align: center;
-  border-radius: 50%;
-  font-size: 0.8em;
-  line-height: 1.6em;
-  margin-left: -32px;
-  margin-right: 10px;
 }

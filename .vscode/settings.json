@@ -1,0 +1,10 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "docker.languageserver.formatter.ignoreMultilineInstructions": true,
+  "editor.formatOnPaste": true,
+  "notebook.formatOnCellExecution": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

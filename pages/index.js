@@ -1,109 +1,80 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Header from "../components/header";
 
-const InternetLinks = () => (
-  <div className="internet-links">
-    <a key={0} href="https://dribbble.com/mayagao" target="_blank">
-      Dribbble
-    </a>
-    <a href="https://www.linkedin.com/in/mayagq/" target="_blank">
-      LinkedIn
-    </a>
-    <a key={2} href="https://www.figma.com/@mayagao" target="_blank">
-      Figma
-    </a>
-    <a key={3} href="https://twitter.com/mayaqgao" target="_blank">
-      Twitter
-    </a>
-    <a key={4} href="mailto:mayaqgao@gmail.com" target="_blank">
-      Email
-    </a>
-  </div>
-);
-export default () => (
-  <div className="">
-    <Head>
-      <style>{`
-
-    `}</style>
-    </Head>
-    <Header />
-    <div id="new-home">
-      <div id="grid-container">
-        <div id="first" className="column">
-          <div>
-            <div className="subheader highlight-text">❤️ Hi I’m Maya Gao,</div>
-            <div className="header">
-              I design tools to help people{" "}
-              <span className="highlight-text">
-                think, create, and collaborate
+export default () => {
+  const [isChinese, setIsChinese] = useState(false);
+  const toggleLanguage = () => {
+    setIsChinese((prev) => !prev);
+  };
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const toggleDarkMode = () => {
+    setIsDarkMode((prev) => !prev);
+  };
+  return (
+    <div className="page-container">
+      <Header />
+      <div className="limiter">
+        <div className="home-header">
+          <div className="left-content">
+            <a onClick={toggleLanguage} className="language-button">
+              <span
+                aria-label="English Toggle"
+                style={{ color: isChinese ? "gray" : "black" }}
+                className="mr1"
+              >
+                En
               </span>
-            </div>
+              <span
+                aria-label="Chinese Toggle"
+                style={{ color: isChinese ? "black" : "gray" }}
+              >
+                中
+              </span>
+            </a>
+            <span className="seperator-dot ph1"> . </span>
+            <a
+              className="toggle-button mr1"
+              onClick={() => setIsDarkMode(false)}
+            >
+              <img
+                src="../static/icons/moon.svg"
+                alt="Light Mode"
+                className={`toggle-icon  ${!isDarkMode ? "active" : ""}`}
+              />
+            </a>
+            <a className="toggle-button" onClick={toggleDarkMode}>
+              <img
+                src="../static/icons/sun.svg"
+                alt="Dark Mode"
+                className={`toggle-icon ${isDarkMode ? "active" : ""}`}
+              />
+            </a>
           </div>
-          {InternetLinks()}
+          <div className="middle-content">
+            Maya Gao <span className="seperator-dot">.</span> Oakland CA
+          </div>
+          <div className="right-content">
+            <a className="mr2">Work</a>
+            <a className="mr2">Ideas</a>
+            <a className="mr2">Places</a>
+            <a>About</a>
+          </div>
         </div>
-        <section id="second" className="column">
-          <p className="empahsis">
-            I'm passionate about making professional tools for technical
-            audiences. I love to approach a project by learning a brand new
-            subject, understanding its intricacies, and finding a balance
-            between data and intuition.
+
+        <div className="description home-intro">
+          <p>
+            <b>Maya Gao</b> is a product designer passionate about bringing
+            clarity to technical complexities and building foundations for early
+            stage products.
           </p>
           <p>
-            In 2015, I joined{" "}
-            <a target="_blank" href="https://www.mapbox.com/">
-              Mapbox
-            </a>{" "}
-            in Washington D.C. to help shape the first version of{" "}
-            <a
-              target="_blank"
-              href="https://www.wired.com/2015/09/mapbox-studio/"
-            >
-              Mapbox Studio
-            </a>
-            , a custom map design tool for cartographers and developers.
-            Cartography is a combination of art and science. Trying to dissect
-            its complexities was a humbling experience.
+            Previously she worked on software that connect learnability and
+            flexibility in the realms of map design, internal operations, and
+            creative programming.
           </p>
-          <p>
-            I moved to{" "}
-            <a href="https://stripe.com/" target="_blank">
-              Stripe
-            </a>{" "}
-            in 2017 where I led the design of Runkit, an interactive JavaScript
-            prototyping playground in the browser. I contributed to a wide range
-            of projects there, including designing better debugging and
-            prototyping experiences for engineers.{" "}
-          </p>
-        </section>
-        <div id="third" className="column">
-          <p>
-            After Stripe, I became the founding designer of{" "}
-            <a href="https://observablehq.com/@mayagao" target="_blank">
-              Observable
-            </a>{" "}
-            in 2019, a visualization tool for data scientists. It was an
-            exciting time at Observable where I got to define new systems for a
-            product still in its nascent stage of development.
-          </p>
-          <p>
-            I'm currently leading design at{" "}
-            <a href="https://retool.com/">Retool</a>. We enable businesses of
-            all sizes build internal tools and automate operational tasks. If
-            problems like layout systems, permission controls, or configurable
-            forms sound interesting to you,{" "}
-            <a
-              href="https://retool.com/careers/#product-designer"
-              target="_blank"
-            >
-              we are hiring
-            </a>
-            .
-          </p>
-          {InternetLinks()}
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};

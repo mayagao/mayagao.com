@@ -2,7 +2,37 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.theme-container {
+  color: var(--text-color);
+  background: var(--background);
+  min-height: 100vh;
+}
 
+.dark-mode {
+  --text-color: #dfd7d7;
+  --background: #302f2c;
+  --highlight-color: #e18d09;
+}
+
+.light-mode {
+  --text-color: #2d2d2d;
+  --background: #f6f6f3;
+  --highlight-color: #e18d09;
+}
+
+body {
+  font-family: "Favorit Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  color: var(--text-color);
+  background: var(--background);
+  font-size: 1.125rem;
+}
+
+.separator-dot {
+  color: var(--highlight-color);
+  padding: 0 6px;
+}
 @font-face {
   font-family: "Degular Regular";
   src: url("fonts/Degular-Regular.woff"); /* IE9 Compat Modes */
@@ -10,9 +40,9 @@
 }
 
 @font-face {
-  font-family: "Degular Bold";
-  src: url("fonts/Degular-Bold.woff"); /* IE9 Compat Modes */
-  src: url("fonts/Degular-Bold.woff2");
+  font-family: "Degular Semibold";
+  src: url("fonts/Degular-Semibold.woff"); /* IE9 Compat Modes */
+  src: url("fonts/Degular-Semibold.woff2");
 }
 
 @font-face {
@@ -31,13 +61,7 @@
 }
 
 .html {
-  font-size: 16px;
-}
-body {
-  font-family: "Favorit Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  color: #2e2a4f;
+  font-size: 62.5%;
 }
 
 pre,
@@ -46,6 +70,10 @@ pre,
     monospace;
   word-break: break-word;
   white-space: normal;
+}
+
+.text-bold {
+  font-family: "Degular Semibold", serif;
 }
 
 p {
@@ -58,47 +86,31 @@ p {
 .mw-limiter {
   max-width: 82rem;
 }
-.f4 {
-  font-size: 1.35rem;
-}
-.f5 {
-  font-size: 1.1rem;
-}
-.f2 {
-  font-size: 2rem;
-}
-.f6 {
-  font-size: 0.96rem;
-}
-.f7 {
-  font-size: 0.9rem;
-}
-.code.f7 {
-  font-size: 0.8rem;
-}
-
-.lh-copy {
-  line-height: 1.6em;
-}
-.txt-xl {
-  font-size: 1.75rem;
-}
 
 .header {
-  font-family: "Degular Bold", serif;
+  font-family: "Degular Semibold", serif;
 }
 .description {
   font-family: "Degular Regular", serif;
   font-size: 2rem;
   line-height: 2.36rem;
-  b {
-    font-family: "Degular Bold", serif;
-  }
 }
-.flex-no-shrink {
-  flex-shrink: 0;
+h5 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-family: "Favorit Medium", sans-serif;
 }
 
-.studio-ui-dive {
-  counter-reset: section;
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-family: "Degular Semibold", serif;
+}
+
+.mini-copy {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+.highlight {
+  color: var(--highlight-color);
 }

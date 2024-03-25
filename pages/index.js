@@ -14,7 +14,7 @@ export default () => {
   return (
     <>
       <Header />
-      <ThemeProvider defaultDarkMode={false}>
+      <ThemeProvider defaultDarkMode={true}>
         <div className="gradient-header mb2"></div>
         <div className="page-container">
           <div className="limiter">

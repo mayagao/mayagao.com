@@ -45,6 +45,7 @@
 .underline-highlight {
   text-decoration: underline;
   text-decoration-thickness: 2px;
+  text-decoration-color: #e18d0095;
 }
 
 .home-intro {

@@ -97,6 +97,9 @@ pre,
 .gradient-header {
   background: linear-gradient(90deg, #d37275 0%, #e1b165 77.17%);
   height: 0.25rem;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
 }
 p {
 }

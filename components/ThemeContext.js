@@ -18,7 +18,6 @@ export const ThemeProvider = ({ children, defaultDarkMode }) => {
       <div
         className={`theme-container ${isDarkMode ? "dark-mode" : "light-mode"}`}
       >
-        {console.log("Current theme:", isDarkMode ? "dark" : "light")}
         {children}
       </div>
     </ThemeContext.Provider>

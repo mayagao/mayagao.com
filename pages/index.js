@@ -18,25 +18,8 @@ export default () => {
           <div className="limiter">
             <div className="home-header">
               <div className="left-content">
-                {/* <a onClick={toggleLanguage} className="language-button">
-                  <span
-                    aria-label="English Toggle"
-                    color="var(--text-color)"
-                    style={{ opacity: isChinese ? "50%" : "100%" }}
-                    className="mr1"
-                  >
-                    En
-                  </span>
-                  <span
-                    aria-label="Chinese Toggle"
-                    color="var(--text-color)"
-                    style={{ opacity: isChinese ? "100%" : "50%" }}
-                  >
-                    中
-                  </span>
-                </a>   <span className="separator-dot highlight"> . </span> */}
                 Maya Gao <span className="separator-dot highlight">.</span>{" "}
-                Oakland CA
+                <></>Oakland CA
               </div>
               <div className="middle-content"></div>
               <div className="right-content">
@@ -75,7 +58,7 @@ export default () => {
                     <p className="mini-copy">
                       <span className="">2023-now</span>
                       <span className="separator-dot">.</span>
-                      <span>AI & Enterprise</span>
+                      <span>AI & upselling strategy</span>
                     </p>
                   </li>
                   <li>
@@ -83,7 +66,7 @@ export default () => {
                     <p className="mini-copy">
                       <span className="">2019-2023</span>
                       <span className="separator-dot">.</span>
-                      <span>Core Products & IDE</span>
+                      <span>App building experience</span>
                     </p>
                   </li>
                   <li>
@@ -91,7 +74,7 @@ export default () => {
                     <p className="mini-copy">
                       <span className="">2017-2019</span>
                       <span className="separator-dot">.</span>
-                      <span>Developer tools</span>
+                      <span>Internal developer tooling</span>
                     </p>
                   </li>
                   <li>
@@ -182,6 +165,7 @@ export default () => {
                       <a
                         href="https://retool.com/blog/reimagining-the-retool-ide"
                         className="mb1 blog-link"
+                        target="_blank"
                       >
                         <h4>Reimagining the Retool IDE</h4>
                         <ArrowSVG />
@@ -196,6 +180,7 @@ export default () => {
                       <a
                         href="https://retool.com/blog/introducing-the-sidebar-frame-create-intuitive-interfaces-for-complex-apps"
                         className="mb1 blog-link"
+                        target="_blank"
                       >
                         <h4>Create intuitive interfaces for complex apps</h4>
                         <ArrowSVG />
@@ -209,6 +194,7 @@ export default () => {
                     <li className="blog-list">
                       <a
                         href="https://blog.mapbox.com/announcing-the-mapbox-studio-dataset-editor-1df7de4b780a"
+                        target="_blank"
                         className="mb1 blog-link"
                       >
                         <h4>Introducing Mapbox Dataset Editor</h4>
@@ -224,6 +210,34 @@ export default () => {
                     </li>
                   </ul>
                 </div>
+              </div>
+            </div>
+
+            <div className="home-footer mt5 ">
+              <div className="left-content mini-copy">© 2024 Maya Gao</div>
+              <div className="right-content ">
+                <a
+                  href="https://twitter.com/mayaqgao"
+                  target="_blank"
+                  className="social-link mr3"
+                >
+                  Twitter
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/mayaqgao/"
+                  target="_blank"
+                  className="social-link mr3"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="mailto: mayaqgao@gmail.com"
+                  target="_blank"
+                  className="social-link"
+                >
+                  Email
+                </a>
               </div>
             </div>
           </div>

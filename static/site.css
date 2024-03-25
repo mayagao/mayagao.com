@@ -101,12 +101,11 @@ pre,
   top: 0px;
   z-index: 2;
 }
-p {
-}
+
 .limiter {
   max-width: 960px;
   margin: auto;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
 .mw-limiter {
   max-width: 82rem;

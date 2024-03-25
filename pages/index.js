@@ -69,124 +69,109 @@ export default () => {
               </p>
             </div>
 
-            <div className="home-content-grid">
-              <div id="experience-column">
-                <h5 className="highlight">Experience</h5>
-                <ul>
-                  <li>
-                    <h4 className="mb1 mt4">Replit</h4>
-                    <p className="mini-copy">
-                      <span className="">2023 - Now</span>
-                      <span className="separator-dot">.</span>
-                      <span>AI & Monetization</span>
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className="mb1 mt4">Retool</h4>
-                    <p className="mini-copy">
-                      <span className="">2019 -2023</span>
-                      <span className="separator-dot">.</span>
-                      <span>Core Products & IDE</span>
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className="mb1 mt4">Stripe</h4>
-                    <p className="mini-copy">
-                      <span className="">2017 -2019</span>
-                      <span className="separator-dot">.</span>
-                      <span>Developer Tools</span>
-                    </p>
-                  </li>
-                  <li>
-                    <h4 className="mb1 mt4">Mapbox</h4>
-                    <p className="mini-copy">
-                      <span className="">2016 - 2017</span>
-                      <span className="separator-dot">.</span>
-                      <span>Mapbox Studio</span>
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div id="work-column">
-                <h5 className="highlight">Featured Work</h5>
-                <ul>
-                  <li>
-                    <h4 className="mb1 mt4">AI Foundational UI</h4>
-                    <p className="mini-copy">
-                      <span className="">Replit, 2023</span>
-                      <span className="separator-dot">.</span>
-                      <span>
-                        An early foundation for AI integration from creation to
-                        production
-                      </span>
-                    </p>
-                    <div className="rectangle-container" id="replit">
-                      <div className="video-wrapper">
-                        <img src="/static/img/replit-1.png"></img>
-                      </div>
+            <div id="experience-section">
+              <h5 className="highlight mb3">Selected projects</h5>
+              <ul>
+                <li>
+                  <h4 className="mb1">Replit AI</h4>
+                  <p className="mini-copy">
+                    <span>An early foundation for AI integration</span>
+                  </p>
+                  <div className="rectangle-container" id="replit">
+                    <div className="video-wrapper">
+                      <img src="/static/img/replit.png"></img>
                     </div>
-                  </li>
-                  <li>
-                    <h4 className="mb1 mt4">Redesigning the Retool IDE</h4>
-                    <p className="mini-copy">
-                      <span className="">Retool, 2022</span>
-                      <span className="separator-dot">.</span>
-                      <span>
-                        Improving flexiblity and learnability in the Retool IDE
-                      </span>
-                    </p>
-                    <div className="rectangle-container" id="retool-1">
-                      <div className="video-wrapper">
-                        <video
-                          loop
-                          autoPlay
-                          playsInline
-                          muted
-                          src="/static/videos/retool-2.mp4"
-                        ></video>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <h4 className="mb1 mt4">Components API</h4>
-                    <p className="mini-copy">
-                      <span className="">Retool, 2020</span>
-                      <span className="separator-dot">.</span>
-                      <span>
-                        Flexible building blocks for internal software.
-                      </span>
-                    </p>
-                    <div className="rectangle-container" id="retool-2">
-                      <div className="video-wrapper">
-                        <img src="/static/img/retool-2.png"></img>
-                      </div>
-                    </div>
-                  </li>
+                  </div>
 
-                  <li>
-                    <h4 className="mb1 mt4">Mapbox Studio</h4>
-                    <p className="mini-copy">
-                      <span className="">Mapbox, 2018</span>
-                      <span className="separator-dot">.</span>
-                      <span>
-                        Accessible tools for cartography and spatial data
-                        editing
-                      </span>
-                    </p>
-                    <div className="rectangle-container" id="mapbox">
-                      <div className="video-wrapper">
-                        <video
-                          loop
-                          autoPlay
-                          playsInline
-                          muted
-                          src="/static/videos/mapbox.mp4"
-                        ></video>
-                      </div>
+                  <p className="mini-copy mt2">Replit, 2023</p>
+                </li>
+                <li>
+                  <h4 className="mb1">The Retool IDE</h4>
+                  <p className="mini-copy">
+                    <span>Improve learnability and ergonomics</span>
+                  </p>
+                  <div className="rectangle-container" id="retool-1">
+                    <div className="video-wrapper">
+                      <video
+                        loop
+                        autoPlay
+                        playsInline
+                        muted
+                        src="/static/videos/retool-2.mp4"
+                      ></video>
                     </div>
-                  </li>
-                </ul>
-              </div>
+                  </div>
+                  <p className="mini-copy mt2">Retool, 2021</p>
+                </li>
+                <li>
+                  <h4 className="mb1">Components & Layouts APIs</h4>
+                  <p className="mini-copy">
+                    Flexible primitives for internal software.
+                  </p>
+                  <div className="rectangle-container" id="retool-2">
+                    <div className="video-wrapper">
+                      <img src="/static/img/retool-2.png"></img>
+                    </div>
+                  </div>
+                  <p className="mini-copy mt2">Retool, 2020</p>
+                </li>
+
+                <li>
+                  <h4 className="mb1">Mapbox Studio</h4>
+                  <p className="mini-copy">
+                    Tools for cartography and spatial data
+                  </p>
+                  <div className="rectangle-container" id="mapbox">
+                    <div className="video-wrapper">
+                      <video
+                        loop
+                        autoPlay
+                        playsInline
+                        muted
+                        src="/static/videos/mapbox.mp4"
+                      ></video>
+                    </div>
+                  </div>
+                  <p className="mini-copy mt2">Mapbox, 2018</p>
+                </li>
+              </ul>
+            </div>
+
+            <div id="writings-section" className="mt4 pb4">
+              <h5 className="highlight mb3">Blog posts</h5>
+              <ul>
+                <li>
+                  <h4 className="mb1">Reimagining the Retool IDE</h4>
+                  <p className="mini-copy">
+                    <span className="">August 17, 2023</span>
+                    <span className="separator-dot">.</span>
+                    <span>
+                      Simplifying Cartography and Spatial Data Editing
+                    </span>
+                  </p>
+                </li>
+                <li>
+                  <h4 className="mb1">
+                    Create intuitive interfaces for complex apps
+                  </h4>
+                  <p className="mini-copy">
+                    <span className="">December 6, 2022</span>
+                    <span className="separator-dot">.</span>
+                    <span>Core Products & IDE</span>
+                  </p>
+                </li>
+                <li>
+                  <h4 className="mb1">Introducing Mapbox Dataset Editor</h4>
+                  <p className="mini-copy">
+                    <span className="">August 23, 2016</span>
+                    <span className="separator-dot">.</span>
+                    <span>
+                      A new tool for creating and editing geospatial data in
+                      your browser.
+                    </span>
+                  </p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

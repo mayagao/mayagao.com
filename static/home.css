@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
+  font-size: 1rem;
 }
 
 .toggle-button {
@@ -50,18 +51,23 @@
   margin: 40px 0px;
 }
 
-.home-content-grid {
-  display: grid;
-  grid-template-columns: 32% auto;
-  grid-gap: 2rem;
-  padding-bottom: 4rem;
+#experience-section {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    overflow: visible;
+    li {
+      width: 380px;
+    }
+  }
 }
 
 .rectangle-container {
   position: relative;
   height: auto;
-  max-width: 620px;
-  min-height: 240px;
+  width: 100%;
+  height: 270px;
   overflow: hidden;
   border-radius: 4px;
   box-shadow: 0 0 0 1px #00000018;
@@ -74,8 +80,6 @@
 
   video,
   img {
-    height: auto;
-    width: 100%;
     border-radius: 6px 0px 0px 0px;
     border: 2px solid #00000015;
   }
@@ -84,7 +88,7 @@
 #replit {
   background-color: #9285d1; /* Your desired background color */
   .video-wrapper {
-    width: 728px;
+    width: 727px;
   }
 }
 #retool-1 {
@@ -97,16 +101,19 @@
 #retool-2 {
   background-color: #6e7ebb;
   .video-wrapper {
-    width: 700px;
+    width: 650px;
   }
 }
 #mapbox {
   background-color: #f0b030;
   video {
-    height: auto;
+    height: 249px;
+    width: auto;
   }
 }
-
+#writings-section li {
+  margin-bottom: 1.5rem;
+}
 @media screen and (max-width: 1140px) {
 }
 

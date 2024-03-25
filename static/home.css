@@ -66,12 +66,11 @@
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 2rem;
   overflow: visible;
-  li {
-    width: 100%;
-    max-width: 572px;
-  }
 }
-
+.projects-section-list li {
+  width: 100%;
+  max-width: 572px;
+}
 .rectangle-container {
   position: relative;
   height: auto;

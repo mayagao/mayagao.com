@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/head";
+import { Head } from "next/document";
 
 export default () => (
   <Head>
@@ -42,7 +42,6 @@ export default () => (
     />
     <link rel="stylesheet" href="../static/reset.css" />
     <link rel="stylesheet" href="../static/site.css" />
-    <link rel="stylesheet" href="../static/agate.css" />
     <link rel="stylesheet" href="../static/home.css" />
     <script
       dangerouslySetInnerHTML={{

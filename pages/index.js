@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import { ThemeProvider } from "../components/ThemeContext";
 import ThemeToggle from "../components/ThemeToggle";
-import Header from "../components/header";
 import ArrowSVG from "../static/icons/arrow.js";
+import { Html, Main, NextScript } from "next/document";
 
 export default () => {
   const [isChinese, setIsChinese] = useState(false);
@@ -13,7 +12,6 @@ export default () => {
 
   return (
     <>
-      <Header />
       <ThemeProvider defaultDarkMode={true}>
         <div className="gradient-header mb2"></div>
         <div className="page-container">
@@ -71,7 +69,7 @@ export default () => {
             <div id="home-content">
               <div id="experience-section">
                 <h5 className="highlight mb3">Experience</h5>
-                <ul>
+                <ul className="experience-section-list">
                   <li>
                     <h4 className="mb1">Replit</h4>
                     <p className="mini-copy">
@@ -109,7 +107,7 @@ export default () => {
               <div>
                 <div id="projects-section">
                   <h5 className="highlight mb3">Projects</h5>
-                  <ul>
+                  <ul className="projects-section-list">
                     <li>
                       <h4 className="mb1">
                         Foundational UI for AI integration
@@ -177,13 +175,13 @@ export default () => {
                   </ul>
                 </div>
 
-                <div id="writings-section" className="mt5 pb4">
+                <div className="mt5 pb4 writings-section">
                   <h5 className="highlight mb3">Writings</h5>
                   <ul>
-                    <li>
+                    <li className="blog-list">
                       <a
                         href="https://retool.com/blog/reimagining-the-retool-ide"
-                        className="mb1"
+                        className="mb1 blog-link"
                       >
                         <h4>Reimagining the Retool IDE</h4>
                         <ArrowSVG />
@@ -194,10 +192,10 @@ export default () => {
                         <span>A journey to bring big changes to life.</span>
                       </p>
                     </li>
-                    <li>
+                    <li className="blog-list">
                       <a
                         href="https://retool.com/blog/introducing-the-sidebar-frame-create-intuitive-interfaces-for-complex-apps"
-                        className="mb1"
+                        className="mb1 blog-link"
                       >
                         <h4>Create intuitive interfaces for complex apps</h4>
                         <ArrowSVG />
@@ -208,10 +206,10 @@ export default () => {
                         <span>Introducing the Sidebar Frame.</span>
                       </p>
                     </li>
-                    <li>
+                    <li className="blog-list">
                       <a
                         href="https://blog.mapbox.com/announcing-the-mapbox-studio-dataset-editor-1df7de4b780a"
-                        className="mb1"
+                        className="mb1 blog-link"
                       >
                         <h4>Introducing Mapbox Dataset Editor</h4>
                         <ArrowSVG />

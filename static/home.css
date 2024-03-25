@@ -177,4 +177,7 @@
   .page-container {
     margin: 0px 24px;
   }
+  .page-container {
+    margin: 0 24px;
+  }
 }

@@ -59,20 +59,18 @@
   grid-template-columns: 1fr 1.6fr;
   grid-gap: 2rem;
 }
-#projects-section,
-#experience-section {
-  ul {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 2rem;
-    overflow: visible;
-    li {
-      width: 100%;
-      max-width: 572px;
-    }
-  }
-}
 
+.experience-section-list,
+.projects-section-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2rem;
+  overflow: visible;
+}
+.projects-section-list li {
+  width: 100%;
+  max-width: 572px;
+}
 .rectangle-container {
   position: relative;
   height: auto;
@@ -88,57 +86,59 @@
   position: absolute;
   top: 20px;
   left: 20px;
-
-  video,
-  img {
-    border-radius: 6px 0px 0px 0px;
-    border: 2px solid #00000015;
-  }
+}
+.video-wrapper video,
+.video-wrapper img {
+  border-radius: 6px 0px 0px 0px;
+  border: 2px solid #00000015;
 }
 
 #replit {
   background-color: #9285d1; /* Your desired background color */
-  .video-wrapper {
-    width: 810px;
-  }
 }
+#replit .video-wrapper {
+  width: 810px;
+}
+
 #retool-1 {
   background-color: #58a1df;
-  video {
-    height: 256px;
-    width: auto;
-  }
 }
+#retool-1 .video-wrapper video {
+  height: 256px;
+  width: auto;
+}
+
 #retool-2 {
   background-color: #6e7ebb;
-  .video-wrapper {
-    width: 650px;
-  }
+}
+#retool-2 .video-wrapper {
+  width: 650px;
 }
 #mapbox {
   background-color: #f0b030;
-  video {
-    height: 313px;
-    width: auto;
+}
+#mapbox video {
+  height: 313px;
+  width: auto;
+}
+.blog-list {
+  margin-bottom: 2rem;
+}
+.blog-link {
+  color: var(--text-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  svg {
+    color: var(--highlight-color);
+    margin-left: 0.15rem;
   }
 }
-#writings-section {
-  li {
-    margin-bottom: 2rem;
-  }
-  a {
-    color: var(--text-color);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    &:hover {
-      color: var(--highlight-color);
-    }
-    svg {
-      color: var(--highlight-color);
-      margin-left: 0.15rem;
-    }
-  }
+.blog-link:hover {
+  color: var(--highlight-color);
+}
+.writings-section {
 }
 @media screen and (max-width: 900px) {
   #home-content {

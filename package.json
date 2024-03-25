@@ -28,7 +28,9 @@
   "main": "next.config.js",
   "devDependencies": {
     "husky": "^0.14.3",
-    "pretty-quick": "^1.6.0"
+    "pretty-quick": "^1.6.0",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5"
   },
   "repository": {
     "type": "git",

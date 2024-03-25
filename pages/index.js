@@ -1,96 +1,236 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
-import { styles } from '../components/styles'
-import Header from '../components/header'
+import React, { useState } from "react";
+import Head from "next/head";
+import { ThemeProvider } from "../components/ThemeContext";
+import ThemeToggle from "../components/ThemeToggle";
+import Header from "../components/header";
+import ArrowSVG from "../static/icons/arrow.js";
 
-const InternetLinks = () => (
-  <div className="internet-links">
-    <a key={0} href="https://dribbble.com/mayagao" target="_blank">
-      Dribbble
-    </a>
-    <a href="https://www.linkedin.com/in/mayagq/" target="_blank">
-      LinkedIn
-    </a>
-    <a key={2} href="https://www.figma.com/@mayagao" target="_blank">
-      Figma
-    </a>
-    <a key={3} href="https://twitter.com/mayaqgao" target="_blank">
-      Twitter
-    </a>
-    <a key={4} href="mailto:mayaqgao@gmail.com" target="_blank">
-      Email
-    </a>
-  </div>
-)
-export default () => (
-  <div className="">
-    <Head>
-      <style>{`
+export default () => {
+  const [isChinese, setIsChinese] = useState(false);
+  const toggleLanguage = () => {
+    setIsChinese((prev) => !prev);
+  };
 
-    `}</style>
-    </Head>
-    <Header />
-    <div id="new-home">
-      <div id="grid-container">
-        <div id="first" className="column">
-          <div>
-            <div className="subheader highlight-text">❤️ Hi I’m Maya Gao,</div>
-            <div className="header">
-              I design tools to help people <span className="highlight-text">think, create, and collaborate</span>
+  return (
+    <>
+      <Header />
+      <ThemeProvider defaultDarkMode={false}>
+        <div className="gradient-header mb2"></div>
+        <div className="page-container">
+          <div className="limiter">
+            <div className="home-header">
+              <div className="left-content">
+                {/* <a onClick={toggleLanguage} className="language-button">
+                  <span
+                    aria-label="English Toggle"
+                    color="var(--text-color)"
+                    style={{ opacity: isChinese ? "50%" : "100%" }}
+                    className="mr1"
+                  >
+                    En
+                  </span>
+                  <span
+                    aria-label="Chinese Toggle"
+                    color="var(--text-color)"
+                    style={{ opacity: isChinese ? "100%" : "50%" }}
+                  >
+                    中
+                  </span>
+                </a>   <span className="separator-dot highlight"> . </span> */}
+                Maya Gao <span className="separator-dot highlight">.</span>{" "}
+                Oakland CA
+              </div>
+              <div className="middle-content"></div>
+              <div className="right-content">
+                <ThemeToggle />
+                {/* <a className="mr3">Work</a>
+                <a className="">About</a> */}
+              </div>
+            </div>
+
+            <div className="description home-intro">
+              <p className="mb3">
+                <span className="text-bold">Maya Gao</span> is a product
+                designer passionate about{" "}
+                <span className="underline-highlight">
+                  bringing clarity to technical complexities
+                </span>{" "}
+                and{" "}
+                <span className="underline-highlight">
+                  building foundations for early stage products
+                </span>
+                .
+              </p>
+              <p>
+                Previously she worked on software that connect learnability and
+                flexibility in the realms of map design, internal operations,
+                and programming.
+              </p>
+            </div>
+
+            <div id="home-content">
+              <div id="experience-section">
+                <h5 className="highlight mb3">Experience</h5>
+                <ul>
+                  <li>
+                    <h4 className="mb1">Replit</h4>
+                    <p className="mini-copy">
+                      <span className="">2023-now</span>
+                      <span className="separator-dot">.</span>
+                      <span>AI & Enterprise</span>
+                    </p>
+                  </li>
+                  <li>
+                    <h4 className="mb1">Retool</h4>
+                    <p className="mini-copy">
+                      <span className="">2019-2023</span>
+                      <span className="separator-dot">.</span>
+                      <span>Core Products & IDE</span>
+                    </p>
+                  </li>
+                  <li>
+                    <h4 className="mb1">Stripe</h4>
+                    <p className="mini-copy">
+                      <span className="">2017-2019</span>
+                      <span className="separator-dot">.</span>
+                      <span>Developer tools</span>
+                    </p>
+                  </li>
+                  <li>
+                    <h4 className="mb1">Mapbox</h4>
+                    <p className="mini-copy">
+                      <span className="">2015-2017</span>
+                      <span className="separator-dot">.</span>
+                      <span>Mapbox Studio</span>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <div id="projects-section">
+                  <h5 className="highlight mb3">Projects</h5>
+                  <ul>
+                    <li>
+                      <h4 className="mb1">
+                        Foundational UI for AI integration
+                      </h4>
+                      <div className="mini-copy mb2">
+                        An early design system for AI integration throughout the
+                        Replit IDE.
+                      </div>
+                      <div className="rectangle-container" id="replit">
+                        <div className="video-wrapper">
+                          <img src="/static/img/replit.png"></img>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <h4 className="mb1">The Retool IDE</h4>
+                      <div className="mini-copy mb2">
+                        <span>
+                          Balance learnability & ergonomics for the core Retool
+                          editor.
+                        </span>
+                      </div>
+                      <div className="rectangle-container" id="retool-1">
+                        <div className="video-wrapper">
+                          <video
+                            loop
+                            autoPlay
+                            playsInline
+                            muted
+                            src="/static/videos/retool-2.mp4"
+                          ></video>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <h4 className="mb1">Retool Components API</h4>
+                      <div className="mini-copy mb2">
+                        Define components & layout primitives for internal
+                        software.
+                      </div>
+                      <div className="rectangle-container" id="retool-2">
+                        <div className="video-wrapper">
+                          <img src="/static/img/retool-2.png"></img>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <h4 className="mb1">Mapbox Studio</h4>
+                      <div className="mini-copy mb2">
+                        Tools for designing custom maps & creating spatial data.
+                      </div>
+                      <div className="rectangle-container" id="mapbox">
+                        <div className="video-wrapper">
+                          <video
+                            loop
+                            autoPlay
+                            playsInline
+                            muted
+                            src="/static/videos/mapbox.mp4"
+                          ></video>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="writings-section" className="mt5 pb4">
+                  <h5 className="highlight mb3">Writings</h5>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://retool.com/blog/reimagining-the-retool-ide"
+                        className="mb1"
+                      >
+                        <h4>Reimagining the Retool IDE</h4>
+                        <ArrowSVG />
+                      </a>
+                      <p className="mini-copy">
+                        <span className="">August 17, 2023</span>
+                        <span className="separator-dot">.</span>
+                        <span>A journey to bring big changes to life.</span>
+                      </p>
+                    </li>
+                    <li>
+                      <a
+                        href="https://retool.com/blog/introducing-the-sidebar-frame-create-intuitive-interfaces-for-complex-apps"
+                        className="mb1"
+                      >
+                        <h4>Create intuitive interfaces for complex apps</h4>
+                        <ArrowSVG />
+                      </a>
+                      <p className="mini-copy">
+                        <span className="">December 6, 2022</span>
+                        <span className="separator-dot">.</span>
+                        <span>Introducing the Sidebar Frame.</span>
+                      </p>
+                    </li>
+                    <li>
+                      <a
+                        href="https://blog.mapbox.com/announcing-the-mapbox-studio-dataset-editor-1df7de4b780a"
+                        className="mb1"
+                      >
+                        <h4>Introducing Mapbox Dataset Editor</h4>
+                        <ArrowSVG />
+                      </a>
+                      <p className="mini-copy">
+                        <span className="">August 23, 2016</span>
+                        <span className="separator-dot">.</span>
+                        <span>
+                          Creating & editing geospatial data in the browser.
+                        </span>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          {InternetLinks()}
         </div>
-        <section id="second" className="column">
-          <p className="empahsis">
-            I'm passionate about making professional tools for technical audiences. I love to approach a project by
-            learning a brand new subject, understanding its intricacies, and finding a balance between data and
-            intuition.
-          </p>
-          <p>
-            In 2015, I joined{' '}
-            <a target="_blank" href="https://www.mapbox.com/">
-              Mapbox
-            </a>{' '}
-            in Washington D.C. to help shape the first version of{' '}
-            <a target="_blank" href="https://www.wired.com/2015/09/mapbox-studio/">
-              Mapbox Studio
-            </a>
-            , a custom map design tool for cartographers and developers. Cartography is a combination of art and
-            science. Trying to dissect its complexities was a humbling experience.
-          </p>
-          <p>
-            I moved to{' '}
-            <a href="https://stripe.com/" target="_blank">
-              Stripe
-            </a>{' '}
-            in 2017 where I led the design of Runkit, an interactive JavaScript prototyping playground in the browser. I
-            contributed to a wide range of projects there, including designing better debugging and prototyping
-            experiences for engineers.{' '}
-          </p>
-        </section>
-        <div id="third" className="column">
-          <p>
-            After Stripe, I became the founding designer of{' '}
-            <a href="https://observablehq.com/@mayagao" target="_blank">
-              Observable
-            </a>{' '}
-            in 2019, a visualization tool for data scientists. It was an exciting time at Observable where I got to
-            define new systems for a product still in its nascent stage of development.
-          </p>
-          <p>
-            I'm currently leading design at <a href="https://retool.com/">Retool</a>. We enable businesses of all sizes
-            build internal tools and automate operational tasks. If problems like layout systems, permission controls,
-            or configurable forms sound interesting to you,{' '}
-            <a href="https://retool.com/careers/#product-designer" target="_blank">
-              we are hiring
-            </a>
-            .
-          </p>
-          {InternetLinks()}
-        </div>
-      </div>
-    </div>
-  </div>
-)
+      </ThemeProvider>
+    </>
+  );
+};

@@ -2,139 +2,138 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.theme-container {
+  color: var(--text-color);
+  background: var(--background);
+  min-height: 100vh;
+}
 
-/* -------------------------------------------------------
-Variable font.
-Usage:
+.dark-mode {
+  --text-color: #dfd7d7;
+  --background: #302f2c;
+  --highlight-color: #e18d09;
+}
 
-  html { font-family: 'Inter', sans-serif; }
-  @supports (font-variation-settings: normal) {
-    html { font-family: 'Inter var', sans-serif; }
-  }
-*/
+.light-mode {
+  --text-color: #2d2d2d;
+  --background: #f6f6f3;
+  --highlight-color: #e18d09;
+}
+
 @font-face {
-  font-family: 'Inter var';
-  font-weight: 100 900;
-  font-display: swap;
+  font-family: "Degular Regular";
+  src: url("fonts/Degular-Regular.woff");
+  src: url("fonts/Degular-Regular.woff2");
+  font-weight: normal;
   font-style: normal;
-  font-named-instance: 'Regular';
-  src: url('fonts/Inter.var.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Karla Regular';
-  src: url('fonts/Karla-Regular.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Karla-Regular.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('fonts/Karla-Regular.woff') format('woff'),
-    /* Pretty Modern Browsers */ url('fonts/Karla-Regular.ttf') format('truetype'),
-    /* Safari, Android, iOS */ url('fonts/Karla-Regular.svg#Karla-Regular') format('svg'); /* Legacy iOS */
+  font-family: "Degular Semibold";
+  src: url("fonts/Degular-Semibold.woff");
+  src: url("fonts/Degular-Semibold.woff2");
+  font-weight: semi-bold;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Rubik Medium';
-  src: url('fonts/Rubik-Medium.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('fonts/Rubik-Medium.woff') format('woff'),
-    /* Pretty Modern Browsers */ url('fonts/Rubik-Medium.ttf') format('truetype'),
-    /* Safari, Android, iOS */ url('fonts/Rubik-Medium.svg#Rubik-Medium') format('svg'); /* Legacy iOS */
+  font-family: "Favorit Regular";
+  src: url("fonts/FavoritPro-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "Favorit Medium";
+  src: url("fonts/FavoritPro-Medium.otf");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Favorit Bold";
+  src: url("fonts/FavoritPro-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+:root {
+  --sans-font-family: "Favorit Regular", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  --serif-font-family: "Degular Semibold", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  --monospace-font-family: "JetBrains Mono", monospace;
+  --body-font-family: var(--sans-font-family);
+  --heading-font-family: var(--serif-font-family);
+}
 body {
-  /font-family: 'Karla Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  color: #2e2a4f;
+  font-family: var(--body-font-family);
+  color: var(--text-color);
+  background: var(--background);
+  font-size: 1.125rem;
 }
 
+.separator-dot {
+  color: var(--highlight-color);
+  padding: 0 6px;
+}
 pre,
 .code {
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
   word-break: break-word;
   white-space: normal;
 }
 
+.text-bold {
+  font-family: "Degular Semibold", serif;
+}
+.gradient-header {
+  background: linear-gradient(90deg, #d37275 0%, #e1b165 77.17%);
+  height: 0.25rem;
+}
+p {
+}
+.limiter {
+  max-width: 960px;
+  margin: auto;
+  padding-bottom: 4rem;
+}
 .mw-limiter {
   max-width: 82rem;
 }
-.f4 {
-  font-size: 1.35rem;
+
+.header {
+  font-family: var(--heading-font-family);
 }
-.f5 {
-  font-size: 1.1rem;
-}
-.f2 {
+.description {
+  font-family: "Degular Regular", serif;
   font-size: 2rem;
+  line-height: 2.36rem;
 }
-.f6 {
-  font-size: 0.96rem;
-}
-.f7 {
-  font-size: 0.9rem;
-}
-.code.f7 {
-  font-size: 0.8rem;
+h5 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-family: "Favorit Medium", sans-serif;
 }
 
-.lh-copy {
-  line-height: 1.6em;
-}
-.txt-xl {
-  font-size: 1.75rem;
-}
-
-.heading {
-  font-family: 'Rubik Medium', serif;
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-family: "Degular Semibold", serif;
 }
 
-.flex-no-shrink {
-  flex-shrink: 0;
+.mini-copy {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  opacity: 0.7;
 }
-
-.studio-ui-dive {
-  counter-reset: section;
-}
-.shadow {
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
-}
-.studio-ui-dive article::before {
-  counter-increment: section;
-  content: counter(section);
-  background: #000;
-  color: #fff;
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  text-align: center;
-  border-radius: 50%;
-  font-size: 0.875rem;
-}
-.mb-list {
-  list-style: none;
-  counter-reset: section;
-}
-.mb-list li {
-  margin-bottom: 8px;
-}
-
-.bg-mb {
-  background-color: #282828;
-}
-
-.bg-mb-light {
-  background: #404040;
-}
-
-.mb-list li::before {
-  counter-increment: section;
-  content: counter(section);
-  background: #000;
-  color: #fff;
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  text-align: center;
-  border-radius: 50%;
-  font-size: 0.8em;
-  line-height: 1.6em;
-  margin-left: -32px;
-  margin-right: 10px;
+.highlight {
+  color: var(--highlight-color);
 }

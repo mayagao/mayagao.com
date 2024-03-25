@@ -40,29 +40,6 @@
   text-align: right;
 }
 
-#grid-container {
-  max-width: 1390px;
-  display: grid;
-  margin: auto;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0px;
-  border-right: 1px solid var(--highlight-color-light);
-}
-.column {
-  border-left: 1px solid var(--highlight-color-light);
-  padding: 0 40px;
-}
-#first.column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#first .internet-links {
-  display: flex;
-}
-#third .internet-links {
-  display: none;
-}
 .underline-highlight {
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -73,47 +50,65 @@
   margin: 40px 0px;
 }
 
-@media screen and (max-width: 1140px) {
-  #new-home {
-    display: block;
-  }
-  #grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  #first.column {
-    grid-row-start: 3;
-    grid-row-end: -1;
-  }
-  #third {
-    margin-top: 24px;
+.home-content-grid {
+  display: grid;
+  grid-template-columns: 32% auto;
+  grid-gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+.rectangle-container {
+  position: relative;
+  height: auto;
+  max-width: 620px;
+  min-height: 240px;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px #00000018;
+}
+
+.video-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  video,
+  img {
+    height: auto;
+    width: 100%;
+    border-radius: 6px 0px 0px 0px;
+    border: 2px solid #00000015;
   }
 }
 
+#replit {
+  background-color: #9285d1; /* Your desired background color */
+  .video-wrapper {
+    width: 728px;
+  }
+}
+#retool-1 {
+  background-color: #58a1df;
+  video {
+    height: 256px;
+    width: auto;
+  }
+}
+#retool-2 {
+  background-color: #6e7ebb;
+  .video-wrapper {
+    width: 700px;
+  }
+}
+#mapbox {
+  background-color: #f0b030;
+  video {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+}
+
 @media screen and (max-width: 800px) {
-  #grid-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .column {
-    padding: 0 20px;
-  }
-  .header {
-    max-width: inherit;
-  }
-  #new-home {
-    padding: 40px 20px;
-  }
-  #first.column {
-    margin-bottom: 180px;
-  }
-  .header {
-    font-size: 38px;
-    line-height: 44px;
-  }
-  #first .internet-links {
-    display: none;
-  }
-  #third .internet-links {
-    margin-top: 100px;
-    display: flex;
-  }
 }

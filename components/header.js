@@ -5,6 +5,18 @@ export default () => (
   <Head>
     <meta charSet="utf-8" />
     <title>Maya Gao</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/static/img/favicon-32x32.png"
+    ></link>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/static/img/favicon-16x16.png"
+    ></link>
     <meta
       name="description"
       content="Product Designer building developer tools at Stripe. Previously Mapbox, Lonely Planet."
@@ -17,16 +29,9 @@ export default () => (
       content="Product Designer building developer tools at Stripe. Previously Mapbox, Lonely Planet."
     />
 
-    <meta
-      property="og:image"
-      content="http://mayagao.com/static/img/og_image.png"
-    />
-    <meta
-      name="twitter:image"
-      content="http://mayagao.com/static/img/og_image.png"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-
+    <meta property="og:image" content="/static/img/og_image.png" />
+    <meta name="twitter:image" content="/static/img/og_image.png" />
+    <meta name="twitter:card" content="/static/img/og_image.png" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=.25, user-scalable=yes"

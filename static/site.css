@@ -20,10 +20,60 @@
   --highlight-color: #e18d09;
 }
 
+@font-face {
+  font-family: "Degular Regular";
+  src: url("fonts/Degular-Regular.woff");
+  src: url("fonts/Degular-Regular.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Degular Semibold";
+  src: url("fonts/Degular-Semibold.woff");
+  src: url("fonts/Degular-Semibold.woff2");
+  font-weight: semi-bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Favorit Regular";
+  src: url("fonts/FavoritPro-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Favorit Medium";
+  src: url("fonts/FavoritPro-Medium.otf");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Favorit Bold";
+  src: url("fonts/FavoritPro-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+:root {
+  --sans-font-family: "Favorit Regular", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  --serif-font-family: "Degular Semibold", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  --monospace-font-family: "JetBrains Mono", monospace;
+  --body-font-family: var(--sans-font-family);
+  --heading-font-family: var(--serif-font-family);
+}
 body {
-  font-family: "Favorit Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  font-family: var(--body-font-family);
   color: var(--text-color);
   background: var(--background);
   font-size: 1.125rem;
@@ -33,37 +83,6 @@ body {
   color: var(--highlight-color);
   padding: 0 6px;
 }
-@font-face {
-  font-family: "Degular Regular";
-  src: url("fonts/Degular-Regular.woff"); /* IE9 Compat Modes */
-  src: url("fonts/Degular-Regular.woff2");
-}
-
-@font-face {
-  font-family: "Degular Semibold";
-  src: url("fonts/Degular-Semibold.woff"); /* IE9 Compat Modes */
-  src: url("fonts/Degular-Semibold.woff2");
-}
-
-@font-face {
-  font-family: "Favorit Regular";
-  src: url("fonts/FavoritPro-Regular.otf");
-}
-
-@font-face {
-  font-family: "Favorit Medium";
-  src: url("fonts/FavoritPro-Medium.otf");
-}
-
-@font-face {
-  font-family: "Favorit Bold";
-  src: url("fonts/FavoritPro-Bold.otf");
-}
-
-.html {
-  font-size: 62.5%;
-}
-
 pre,
 .code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
@@ -80,7 +99,7 @@ p {
   margin-bottom: 0.8rem;
 }
 .limiter {
-  max-width: 1280px;
+  max-width: 1000px;
   margin: auto;
 }
 .mw-limiter {
@@ -88,7 +107,7 @@ p {
 }
 
 .header {
-  font-family: "Degular Semibold", serif;
+  font-family: var(--heading-font-family);
 }
 .description {
   font-family: "Degular Regular", serif;

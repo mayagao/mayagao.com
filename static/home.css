@@ -44,9 +44,10 @@
 }
 
 .underline-highlight {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-decoration-color: #e18d0095;
+  background-image: linear-gradient(to right, #d37375, #e2b166);
+  background-size: 100% 2px;
+  background-position: 0 80%;
+  background-repeat: no-repeat;
 }
 
 .home-intro {

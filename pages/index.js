@@ -32,13 +32,13 @@ export default () => {
             <div className="description home-intro">
               <p className="mb3">
                 <span className="text-bold">Maya Gao</span> is a product
-                designer passionate about{" "}
+                designer passionate about bringing{" "}
                 <span className="underline-highlight">
-                  bringing clarity to technical complexities
+                  clarity to technical complexities
                 </span>{" "}
-                and{" "}
+                and building{" "}
                 <span className="underline-highlight">
-                  building foundations for early stage products
+                  foundations for early stage products
                 </span>
                 .
               </p>

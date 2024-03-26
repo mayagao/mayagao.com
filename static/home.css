@@ -145,19 +145,18 @@
   color: var(--highlight-color);
 }
 
-.writings-section {
-}
 @media screen and (max-width: 900px) {
   #home-content {
     grid-template-columns: 1fr;
   }
+  #experience-section ul {
+    grid-template-columns: repeat(2, 1fr);
+    order: 1;
+  }
   #experience-section {
-    ul {
-      grid-template-columns: repeat(2, 1fr);
-      order: 1;
-    }
     grid-row: 2;
     order: 2;
+    margin-bottom: 3rem;
   }
 }
 
@@ -165,7 +164,7 @@
   #experience-section ul {
     grid-template-columns: 1fr;
   }
-  #writings-section svg {
+  .writings-section svg {
     display: none;
   }
   .home-footer {
@@ -177,7 +176,11 @@
   .page-container {
     margin: 0px 24px;
   }
-  .page-container {
-    margin: 0 24px;
+  #home-content {
+    grid-gap: 0px;
+  }
+  .description {
+    font-size: 1.6rem;
+    line-height: 1.85rem;
   }
 }
